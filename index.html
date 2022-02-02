@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Restaurant Generator</title>
+</head>
+<body>
+    <div id="app">
+        <img :src="logo" :alt="`${name}`" :class="gender" />
+        <h1>{{name}}</h1>
+        <p>{{phoneNumber}}</p>
+        <p>{{address}}</p>
+        <p>{{description}}</p>
+        <p>{{review}}</p>
+
+        <table>
+            <th>
+                <td>Day</td>
+                <td>Opens</td>
+                <td>Closes</td>
+            </th>
+            <tr v-for="day in hoursOpen" :key="item.message">
+                {{day}}
+            </tr>
+        </table>
+        <button :class="gender" @click="getUser()">Get Random User</button>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
